@@ -1,0 +1,124 @@
+:root{
+    --background-color1: black;
+    --background-color2: rgb(10, 110, 141);
+    --color-white: white;
+    --color-grey: rgb(61, 60, 60);
+    --color-grey-light: rgb(95, 93, 93);
+    --color-background-3: rgb(41, 41, 41);
+    --color-green: rgb(1, 124, 1);
+    --color-green-light: rgb(15, 194, 15);
+
+}
+
+*{
+    font-family: 'Source Sans 3';
+    font-weight: 600;
+    
+}
+
+body{
+    color: white;
+    background-color: var(--background-color1) ;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;  
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; 
+}
+
+.content--additem{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#inputText,
+#btnAdd{
+    border: none;
+    font: 1rem;
+    outline: none;
+    padding: 1rem;
+
+}
+
+#inputText{
+    width: 20rem;
+    border-radius: 1rem;;
+
+}
+
+#btnAdd{
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+
+#btnAdd:hover{
+    transform: rotate(90deg);
+    background-color: var(--color-grey-light);
+}
+
+#list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+#list li {
+
+    user-select: none;
+    list-style-type: none;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .4s ease-in-out;
+}
+
+#list li:hover{
+    background-color: var(--color-background-3);
+    transition: .4s ease-in-out;
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+
+
+.nome {
+    user-select: none;
+}
+
+#btn-ok{
+    border: none;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    outline: none;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#btn-ok:hover{
+    transform: rotate(15deg);
+    background-color: var(--color-green-light);
+}
+
