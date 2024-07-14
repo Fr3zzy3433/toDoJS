@@ -1,6 +1,7 @@
 const localStorageKey = 'to-do-list'
 
-
+// Here we create a variable to allow adding new tasks by pressing the Enter key on the keyboard
+// We add an EventListener that, when the Enter key is pressed, calls the function newTask()
 let Teclado = document.getElementById('inputText').addEventListener('keydown', function(enter) {
     if (enter.key === 'Enter') {
         newTask();
@@ -28,21 +29,17 @@ function newTask () {
 
     else 
     {
-
         input.style.border = '2px solid green';
         //armazenamento no localStorage
         let values = JSON.parse(localStorage.getItem(localStorageKey)  || "[]");
         values.push({
             name: input.value   
         })
-
          localStorage.setItem(localStorageKey, JSON.stringify(values))
          showValues()
-    
     }
     input.value = ''
 }
-
 
 function removeItem(data){
     //Essa variável guarda os valores do Local Storage, por isso reutilizamos ela no código
@@ -53,7 +50,6 @@ function removeItem(data){
     showValues()
      
 }
-
 
 function showValues(){
     let values = JSON.parse(localStorage.getItem(localStorageKey)  || "[]");
